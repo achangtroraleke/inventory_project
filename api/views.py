@@ -46,7 +46,7 @@ class RegisterUserView(generics.CreateAPIView):
         self.perform_create(serializer)
         
         return Response(
-            {'message': 'Registration successful. Please log in.'}, 
+            serializer.data,
             status=status.HTTP_201_CREATED
         )
 
