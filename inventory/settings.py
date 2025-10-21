@@ -31,7 +31,7 @@ if DEBUG == False:
 
 if not SECRET_KEY:
     raise Exception("SECRET_KEY environment variable not set!")
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['inventory-ulxc.onrender.com']
 
 
 # Application definition
