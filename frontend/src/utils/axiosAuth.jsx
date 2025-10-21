@@ -1,7 +1,7 @@
 // src/utils/axiosAuth.js
 import axios from 'axios';
 
-const BASE_URL = 'http://127.0.0.1:8001/api'; // Update to your backend
+const BASE_URL = '/api'; // Update to your backend
 
 export const axiosAuth = () => {
   const token = localStorage.getItem('authToken');
