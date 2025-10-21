@@ -21,7 +21,9 @@ export const AuthProvider = ({children}) =>{
           const res = await axiosPublic.post('/register/', formData);
           if(res.status === 201){
             setToken(res.data.access);
-          window.location.reload()
+            window.location.reload()
+            return res
+         
           }
       
             
