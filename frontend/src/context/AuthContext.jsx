@@ -38,7 +38,7 @@ export const AuthProvider = ({children}) =>{
           const res = await axiosPublic.post('/register/', formData);
           console.log(res)
           if(res.status === 201){
-            loginUser({'email':res.data.email,'password':res.data.password})
+            loginUser(formData={'email':res.data.email,'password':res.data.password})
             
             return res
          
