@@ -19,7 +19,7 @@ export const AuthProvider = ({children}) =>{
     const loginUser = async (formData) => {
         console.log(formData)
         try {
-          const res = await axiosAuth().post('/token/', formData);
+          const res = await axiosPublic().post('/token/', formData);
           setToken(res.data.access);
           setUser(jwtDecode(res.data.access))
           setRefreshToken(res.data.refresh);
