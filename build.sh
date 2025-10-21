@@ -11,3 +11,6 @@ python manage.py makemigrations
 
 # Apply any outstanding database migrations
 python manage.py migrate
+
+
+npm run build
