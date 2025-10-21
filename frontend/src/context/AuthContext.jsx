@@ -14,27 +14,7 @@ export const AuthProvider = ({children}) =>{
     const [user, setUser] = useLocalStorageState('user',null)
     const headers = {'Content-Type':'application/json'}
  
-    const registerUser = async (formData) =>{
 
-
-        try {
-          const res = await axiosPublic.post('/register/', formData);
-          console.log(res)
-          if(res.status === 201){
-            setToken(res.data.access);
-            setUser(jwtDecode(res.data.access))
-            setRefreshToken(res.data.refresh);
-            
-            return res
-         
-          }
-      
-            
-        } catch (err) {
-          console.error('Registration failed:', err);
-          throw err;
-        }
-    }
 
     const loginUser = async (formData) => {
         console.log(formData)
@@ -52,6 +32,24 @@ export const AuthProvider = ({children}) =>{
           throw err;
         }
       };
+
+    const registerUser = async (formData) =>{
+        try {
+          const res = await axiosPublic.post('/register/', formData);
+          console.log(res)
+          if(res.status === 201){
+            loginUser({'email':res.data.email,'password':res.data.password})
+            
+            return res
+         
+          }
+      
+            
+        } catch (err) {
+          console.error('Registration failed:', err);
+          throw err;
+        }
+    }
 
     const logoutUser = ()=>{
         
