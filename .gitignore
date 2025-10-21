@@ -1,0 +1,84 @@
+=========================================================
+
+OPERATING SYSTEM AND IDE FILES
+
+=========================================================
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+=========================================================
+
+PYTHON / DJANGO BACKEND
+
+=========================================================
+
+Virtual Environment
+
+venv/
+env/
+.venv/
+.pip_cache/
+
+Compiled Python files
+
+*.pyc
+pycache/
+
+Django specific files
+
+db.sqlite3
+local_settings.py  # Local/development settings overrides
+*.log
+
+Static and Media Files (for production deployment)
+
+/media/
+/static_root/
+
+=========================================================
+
+JAVASCRIPT / REACT FRONTEND
+
+=========================================================
+
+Dependency directory
+
+/node_modules
+
+Build/Transpilation output
+
+/build
+/dist
+/out
+
+NPM/Yarn Debugging and Error Logs
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+=========================================================
+
+SENSITIVE DATA AND ENVIRONMENT VARIABLES
+
+(CRITICAL for security)
+
+=========================================================
+
+Python/Django environment files
+
+.env
+.env.*
+
+Frontend environment files (if used, e.g., for local variables)
+
+.env.local
+.env.development.local
+.env.production.local
+
+Django Secret Key file (if you store it externally)
+
+secret_key.txt
