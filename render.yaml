@@ -20,3 +20,22 @@ services:
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
+
+ # --- B. REACT FRONTEND (STATIC SITE) ---
+  - type: static_site
+    name: inventory-frontend
+    
+    # Crucial: Specify the React root directory
+    rootDir: frontend
+    
+    # Command to install Node dependencies and run the build script
+    buildCommand: 'npm install && npm run build'
+    
+    # The directory where the compiled static files (HTML, JS, CSS) are saved
+    publishPath: build 
+    
+    # Custom Headers (Recommended)
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate

@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'https://inventory-ulxc.onrender.com/',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
