@@ -19,6 +19,7 @@ export const AuthProvider = ({children}) =>{
 
         try {
           const res = await axiosPublic.post('/register/', formData);
+          console.log(res)
           if(res.status === 201){
             setToken(res.data.access);
             setUser(jwtDecode(res.data.access))
