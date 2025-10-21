@@ -32,7 +32,7 @@ export const AuthProvider = ({children}) =>{
     }
 
     const loginUser = async (formData) => {
-        console.log(formData)
+        
         try {
           const res = await axiosAuth().post('/token/', formData);
           setToken(res.data.access);
