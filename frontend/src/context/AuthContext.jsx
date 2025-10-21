@@ -35,7 +35,7 @@ export const AuthProvider = ({children}) =>{
 
     const registerUser = async (formData) =>{
         try {
-          const res = await axiosPublic.post('/register/', formData);
+          const res = await axiosPublic().post('/register/', formData);
           console.log(res)
           if(res.status === 201){
             loginUser(formData={'email':res.data.email,'password':formData.password})
