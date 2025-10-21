@@ -23,7 +23,7 @@ export const AuthProvider = ({children}) =>{
             setToken(res.data.access);
             setUser(jwtDecode(res.data.access))
             setRefreshToken(res.data.refresh);
-            window.location.reload()
+            
             return res
          
           }
