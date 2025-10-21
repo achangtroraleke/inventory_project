@@ -37,7 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'https://inventory-ulxc.onrender.com/',
+   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -169,6 +169,7 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
+    'https://inventory-ulxc.onrender.com',
     "http://localhost:8000",
     "http://127.0.0.1:8000",
     "http://localhost:5173",
