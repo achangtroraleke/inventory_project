@@ -17,7 +17,7 @@ export const AuthProvider = ({children}) =>{
 
 
     const loginUser = async (formData) => {
-        console.log(formData)
+        console.log("LOGIN",formData)
         try {
           const res = await axiosPublic().post('/token/', formData);
           setToken(res.data.access);
