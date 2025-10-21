@@ -8,10 +8,10 @@ export default defineConfig({
     tailwindcss(),
   ],
   server:{
-    port: 8000,
+   
     proxy: {
       '/api': {
-        target: 'http://localhost:8001', // Replace with your Django backend URL and port
+        target: 'http://localhost:8000', // Replace with your Django backend URL and port
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Optional: remove /api prefix if not needed by backend
       },
