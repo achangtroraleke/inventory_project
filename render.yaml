@@ -17,7 +17,7 @@ services:
     plan: free
     runtime: python
     # CRUCIAL: Point to the backend folder containing manage.py
-    rootDir: backend 
+   
     
     # Use the build.sh script defined previously
     buildCommand: './build.sh' 
